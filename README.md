@@ -46,7 +46,7 @@ Run the script by providing either a direct URL or a configured alias.
 
 **Download using a direct URL:**
 ```bash
-./spotify-downloader.sh "[https://open.spotify.com/track/123456789](https://open.spotify.com/track/123456789)"
+./spotify-downloader.sh "https://open.spotify.com/track/123456789"
 ```
 
 **Download a configured playlist using an alias:**
