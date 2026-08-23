@@ -6,7 +6,7 @@ Under the hood, this script uses the open-source project [Zotify](https://github
 
 ## How it Works
 
-The script (`download.sh`) runs a temporary Docker container with Zotify. It simplifies the download process by supporting aliases (via a `.env` file), eliminating the need to look up the full Spotify URL every time. 
+The script (`spotify-downloader.sh`) runs a temporary Docker container with Zotify. It simplifies the download process by supporting aliases (via a `.env` file), eliminating the need to look up the full Spotify URL every time. 
 
 When you use an alias, the script looks up the corresponding URL and automatically appends the Zotify parameter `--output-ext-playlist` to the command. Direct URLs are handled without this extra flag.
 
@@ -31,7 +31,7 @@ summer_mix=[https://open.spotify.com/playlist/1234567890abcdef](https://open.spo
 Run the script by providing either a direct URL or a configured alias.
 
 ```bash
-./download.sh <SPOTIFY_URL ALIAS |> [OPTIONS]
+./spotify-downloader.sh <SPOTIFY_URL ALIAS |> [OPTIONS]
 ```
 
 ### Arguments and Parameters
@@ -46,9 +46,9 @@ Run the script by providing either a direct URL or a configured alias.
 
 **Download using a direct URL:**
 ```bash
-./download.sh "[https://open.spotify.com/track/123456789](https://open.spotify.com/track/123456789)"
+./spotify-downloader.sh "[https://open.spotify.com/track/123456789](https://open.spotify.com/track/123456789)"
 ```
 
 **Download a configured playlist using an alias:**
 ```bash
-./download.sh name1
+./spotify-downloader.sh name1
