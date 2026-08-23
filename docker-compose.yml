@@ -1,0 +1,19 @@
+
+services:
+  zotify:
+    #image: zotify:latest
+    build: .
+    container_name: zotify
+    #hostname: zotify
+    network_mode: host
+    #network_mode: "host"
+    restart: always
+    environment:
+      - TZ=Europe/Amsterdam
+      - UMASK=022 #optional
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ~/Music:/music
+      - ~/Music/Podcasts:/podcasts
+      - ./config/:/home/zotify/.config/zotify/
+    #command: python -m zotify
